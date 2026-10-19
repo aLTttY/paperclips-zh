@@ -9,27 +9,6 @@
     
     <body>
         
-<!--     <audio id="threnody1">
-        <source src="test.mp3" type="audio/mpeg">
-        
-    </audio>   -->  
-
-    <div id="mobile">
-        <div id="mobile-content">
-            <div id="mobile-title">
-                <img src="mobile-title.png">
-            </div>
-            <div id="mobile-main-text">
-                本游戏的网页版<br />并非为手机设计。<br />请下载下方的手机版。
-            </div>
-            <div id="mobile-badges">
-                <a href="https://itunes.apple.com/us/app/universal-paperclips/id1300634274?ls=1&mt=8"><img src="apple_badge.svg" id="apple_badge"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.everybodyhouse.paperclipsuniquetest"><img src="google_badge.svg" id="google_badge"></a>
-            </div>
-        </div> <!-- END mobile-content -->
-        
-    </div> <!-- END mobile -->
-        
     <div id="page">
         
     <div id="cover">
@@ -40,14 +19,6 @@
         </div>
         
         <div id="consoleDiv">
-            
-            <div id="giftShopDiv" class = "shop">
-                
-                手机版：<a href = "https://t.co/t7YJKgiQpr" target = "_blank">iPhone</a> / <a href = "https://t.co/vtIAcdIYEj" target = "_blank">Android</a><br />    
-                
-                T 恤：<a href = "https://universal-paperclips-shop.fourthwall.com/" target="_blank" >礼品店</a> 
-                
-            </div>
 
             <p class = "consoleOld"> 
                 <span>&nbsp;.&nbsp;</span><span id="readout5"></span><br />
@@ -69,7 +40,7 @@
             
             </div>        
         <div class = "toolTip">
-        <span id = "clipCountCrunched" class = "toolTipText">已生产回形针总数</span>    
+        <span id = "clipCountCrunched" class = "toolTipText">累计产量</span>    
         <h2>回形针：<span id="clips">0</span></h2>
         </div>
             
@@ -95,7 +66,7 @@
         </div>        
         
         <div id = "tothDiv">    
-        未使用回形针：<span id="unusedClipsDisplay">0</span><br />
+        可用回形针：<span id="unusedClipsDisplay">0</span><br />
         </div>
         <br /> 
            
@@ -114,7 +85,7 @@
         </div>    
         <br />    
             
-        费用：<span id="factoryCostDisplay">0</span> 枚回形针<br />
+        费用：<span id="factoryCostDisplay">0</span>枚回形针<br />
         <br />
         </div>
             
@@ -139,11 +110,11 @@
         </div>    
             
         可用物质：<span id="availableMatterDisplay">0</span> 克<br />
-        <div id="mdpsDiv">(<span id="mdps">0</span> 克/秒)<br /></div>     
+        <div id="mdpsDiv">（<span id="mdps">0</span> 克/秒）<br /></div>     
         已获取物质：<span id="acquiredMatterDisplay">0</span> 克<br />
-        (<span id="maps">0</span> 克/秒)<br />        
+        （<span id="maps">0</span> 克/秒）<br />        
         铁丝：<span id="nanoWire">0</span> 英寸<br />
-        (<span id="wpps">0</span> 英寸/秒) <br />    
+        （<span id="wpps">0</span> 英寸/秒） <br />    
         <br />
             
         <div id = "harvesterDiv">
@@ -173,14 +144,14 @@
         </div>    
         <br />    
             
-        费用：<span id="harvesterCostDisplay">0</span> 枚回形针<br /><br />
+        费用：<span id="harvesterCostDisplay">0</span>枚回形针<br /><br />
         
         </div> 
             
         <div id = "wireDroneDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeWireDrone"
-        onclick="makeWireDrone(1)">&nbsp 铁丝无人机 &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
+        onclick="makeWireDrone(1)">&nbsp 拉丝无人机 &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
             
         <div id = "wireDroneMultiButtons">    
             
@@ -199,14 +170,14 @@
         </div>    
         <br />    
             
-        费用：<span id="wireDroneCostDisplay">0</span> 枚回形针<br />
+        费用：<span id="wireDroneCostDisplay">0</span>枚回形针<br />
         <br />
         </div>  
             
         <div id = "droneDivSpace">
             
         采集无人机：<span id = "harvesterLevelSpace">0</span><br />
-        铁丝无人机：<span id = "wireDroneLevelSpace">0</span><br /><br /> 
+        拉丝无人机：<span id = "wireDroneLevelSpace">0</span><br /><br /> 
         
         </div>     
             
@@ -224,7 +195,7 @@
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeProbe"
         onclick="makeProbe()">发射探测器</button><br />
-        费用：<span id="probeCostDisplay">0</span> 枚回形针<br />
+        费用：<span id="probeCostDisplay">0</span>枚回形针<br />
         <br />
         </div>   
         
@@ -232,9 +203,9 @@
         后代：<span id="probesBornDisplay">0</span><br />  
         <br />
             
-        <div id = "hazardBodyCount">因灾害损失：(<span id="probesLostHazardsDisplay">0</span>)<br /></div>
-        <div id = "driftBodyCount">因价值漂移损失：(<span id="probesLostDriftDisplay">0</span>)<br /></div>
-        <div id = "combatBodyCount">因战斗损失：(<span id="probesLostCombatDisplay">0</span>)<br /></div>     
+        <div id = "hazardBodyCount">毁于灾害：<span id="probesLostHazardsDisplay">0</span><br /></div>
+        <div id = "driftBodyCount">漂移叛离：<span id="probesLostDriftDisplay">0</span><br /></div>
+        <div id = "combatBodyCount">战斗损失：<span id="probesLostCombatDisplay">0</span><br /></div>     
         
         <hr class = "short">
             
@@ -242,7 +213,7 @@
         <br />
             
         <div id = "drifterDiv">
-        已消灭漂移者：<span id="driftersKilled">0</span><br />
+        击毁漂移者：<span id="driftersKilled">0</span><br />
         漂移者：<span id="drifterCount">0</span><br />      
         </div>    
             
@@ -270,7 +241,7 @@
         onclick="raisePrice()">涨价</button>
         单价：$ <span id="margin">.25</span><br />
             
-        公众需求：<span id="demand">10</span>%<br />
+        市场需求：<span id="demand">10</span>%<br />
         <br />    
         
         <button class = "button2" id = "btnExpandMarketing"
@@ -363,7 +334,7 @@
             
         <div id="trustDiv">    
         信任：<span id="trust">2</span><br />
-        下一点信任：<span id="nextTrust">1000</span> 枚回形针<br />    
+        下次信任 +1：<span id="nextTrust">1000</span> 枚回形针<br />    
         <br />
         </div>
             
@@ -402,15 +373,15 @@
         <b>蜂群计算</b><br />
         无人机：<span id="swarmSize">0</span><br />   
         <div id ="swarmStatusDiv">状态：<span id="swarmStatus">x </span></div>
-        <div id="giftTimer">下次馈赠：<span id="giftCountdown">17 秒</span></div> 
+        <div id="giftTimer">距下次馈赠：<span id="giftCountdown">17 秒</span></div> 
             
-        <div id="feedButtonDiv"><button class = "button2" id = "btnFeedSwarm" onclick = "feedSwarm()">喂养蜂群</button> <br />   
+        <div id="feedButtonDiv"><button class = "button2" id = "btnFeedSwarm" onclick = "feedSwarm()">喂饱蜂群</button> <br />   
         费用：<span id="swarmFeedCost">0</span> MW</div>
         
         <div id="teachButtonDiv"><button class = "button2" id = "btnTeachSwarm" onclick = "teachSwarm()">教导蜂群</button><br />   
         费用：<span id="swarmFeedCost">0</span> MW</div>  
             
-        <div id="entertainButtonDiv"><button class = "button2" id = "btnEntertainSwarm" onclick = "entertainSwarm()">娱乐蜂群</button><br />   
+        <div id="entertainButtonDiv"><button class = "button2" id = "btnEntertainSwarm" onclick = "entertainSwarm()">逗蜂群开心</button><br />   
         费用：<span id="swarmEntertainCost">0</span> 创造力</div>  
             
         <div id="cladButtonDiv"><button class = "button2" id = "btnCladSwarm" onclick = "cladSwarm()">为蜂群保暖</button><br />   
@@ -570,7 +541,7 @@
         
         <div id = "tournamentLabel">   
         <p class="clean2">
-        <span id="tourneyDisplay">选择策略，运行锦标赛，获得 Yomi</span><br />   
+        <span id="tourneyDisplay">挑个策略，跑场锦标赛，赚点 Yomi</span><br />   
         </p>
         </div> 
             
@@ -685,7 +656,7 @@
     
         <p class="clean2">
 
-            <span id="battleName">漂移者袭击 1</span></p><br />
+            <span id="battleName">漂移者来袭 1</span></p><br />
             
         <div id = "victoryDiv">
            
@@ -712,18 +683,18 @@
         <div id="powerDiv">
         <b>电力</b>
         <hr>    
-        工厂/无人机效率：<span id="performance">0</span>%<br />
+        工厂/无人机运转效率：<span id="performance">0</span>%<br />
         <br />    
-        消耗：<span id="powerConsumptionRate">0</span> MW<br /> 
+        耗电：<span id="powerConsumptionRate">0</span> MW<br /> 
         <p class = "clean">    
         工厂：<span id="facPowConRate">0</span> MW<br />
         无人机：<span id="dronePowConRate">0</span> MW<br /> 
         </p> <br />    
               
-        产出：<span id="powerProductionRate">0</span> MW<br />    
+        发电：<span id="powerProductionRate">0</span> MW<br />    
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeFarm"
-        onclick="makeFarm(1)">太阳能农场</button> <span class = "engineText6" id="farmLevel">0</span></p>
+        onclick="makeFarm(1)">太阳能电站</button> <span class = "engineText6" id="farmLevel">0</span></p>
             
         <div id = "farmMultiButtons">    
             
@@ -743,10 +714,10 @@
             
         </br> 
             
-        费用：<span id="farmCost">0</span> 枚回形针<br />
+        费用：<span id="farmCost">0</span>枚回形针<br />
         <br />
             
-        储能：<span id="storedPower">0</span> / <span id="maxStorage">0</span> MW·秒<br />
+        储电：<span id="storedPower">0</span> / <span id="maxStorage">0</span> MW·秒<br />
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeBattery"
         onclick="makeBattery(1)">电池塔</button> <span class = "engineText6" id="batteryLevel">0</span></p>
@@ -770,7 +741,7 @@
         
         </br>     
             
-        费用：<span id="batteryCost">0</span> 枚回形针<br />
+        费用：<span id="batteryCost">0</span>枚回形针<br />
         <br />     
                       
         </div>               
@@ -783,9 +754,7 @@
         <p class=engineText>
             
             <b>冯·诺依曼探测器设计</b><br />
-        信任：
-        <span id="probeTrustUsedDisplay">0</span> / <span id="probeTrustDisplay">0</span>
-        (<span id="maxTrustDisplay">0</span> 上限)<br /> 
+        信任：<span id="probeTrustUsedDisplay">0</span> / <span id="probeTrustDisplay">0</span>（上限 <span id="maxTrustDisplay">0</span>）<br /> 
         
         </p>
              
@@ -825,7 +794,7 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">探测器制造更多探测器的速率（每个新探测器消耗 10 京枚回形针）</span>
+        <span class = "toolTipText2">探测器自我复制的速率（每复制一个消耗 10 京枚回形针）</span>
             
         自我复制：<span id="probeRepDisplay">0</span>
             
@@ -838,7 +807,7 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">减少尘埃、碎片、辐射和一般熵衰减造成的损伤</span>    
+        <span class = "toolTipText2">减少尘埃、太空垃圾、辐射以及各种熵增衰变造成的损伤</span>    
             
         灾害防护：<span id="probeHazDisplay">0</span>
             
@@ -864,7 +833,7 @@
             
          <div class = "toolTip2">     
          
-        <span class = "toolTipText2">探测器生成采集无人机的速率（每架新无人机消耗 200 万枚回形针）</span>
+        <span class = "toolTipText2">探测器生产采集无人机的速率（每架新无人机消耗 200 万枚回形针）</span>
             
         采集无人机生产：<span id="probeHarvDisplay">0</span>
              
@@ -877,9 +846,9 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">探测器生成铁丝无人机的速率（每架新无人机消耗 200 万枚回形针）</span>
+        <span class = "toolTipText2">探测器生产拉丝无人机的速率（每架新无人机消耗 200 万枚回形针）</span>
             
-        铁丝无人机生产：<span id="probeWireDisplay">0</span>
+        拉丝无人机生产：<span id="probeWireDisplay">0</span>
             
             </div>    <br />  
                

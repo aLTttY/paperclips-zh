@@ -782,7 +782,7 @@ function createBattle(){
         
     Battle();
     
-    battleName = ("漂移者袭击 "+newBattle.id);
+    battleName = ("漂移者来袭 "+newBattle.id);
     
         if (battleNameFlag == 1){
         battleName = generateBattleName();

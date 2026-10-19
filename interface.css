@@ -81,26 +81,6 @@
   color: black;
 }
 
-@media only screen and (max-width: 700px)
-{
-  body 
-  {
-    margin: 0;
-    padding: 0;
-  }
-
-  #mobile 
-  {
-    display: block;
-  }
-
-  #page 
-  {
-    display: none;
-  }
-}
-
-
 /* ############# MOBILE TAKEOVER ############## */
 
 #btnMakeProbe {
@@ -914,4 +894,9 @@ p.hypnoDrone {
    向下撑开、压住下方的“荣誉”。这里把行高固定为接近原版的数值。 */
 #battleInterfaceDiv {
     line-height: 1.15;
+}
+
+/* 中文汉化：窄栏里的“费用：91,117.99 荣誉”不要把“荣誉”拆成两行 */
+.engineText8 {
+    word-break: keep-all;
 }
