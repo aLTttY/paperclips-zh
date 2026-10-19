@@ -1,6 +1,6 @@
 #mobile
 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'Open Sans', sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'Open Sans', "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-weight: 300; 
   display: none;
   width: 100%;
@@ -178,7 +178,7 @@ h2 {
     padding-right: 5px;
     padding-top: 3px;
     padding-bottom: 3px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 14px;
     text-align: right;
 }
@@ -230,7 +230,7 @@ h2 {
     padding: 5px 0;
     border-radius: 3px;
     
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     
     position: absolute;
@@ -458,7 +458,7 @@ canvas {
 #vertPad {
   float: left;
   width: 35%;    
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 11;     
 }
 
@@ -466,7 +466,7 @@ canvas {
   float: right;
   text-align: center;
   width: 65%;    
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 11;     
 
 }
@@ -480,7 +480,7 @@ canvas {
   justify-content: center;    
   width: 25%;  
   height: 56px;    
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 11;     
 }
 
@@ -628,7 +628,7 @@ hr.short {
 
 table.table1 {
     table-layout: fixed;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 0;
     margin-top: 0;
@@ -642,7 +642,7 @@ table.table1 tr:nth-child(even) {
 
 table.table2 {
     border-collapse: collapse;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 0;
     margin-top: 0;
@@ -654,7 +654,7 @@ table.table2 {
 
 table.table3 {
     border-collapse: collapse;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 0;
     margin-top: 0;
@@ -686,7 +686,7 @@ table.table2 td{
 
 
 p.clean {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 0;
     margin-top: 1px;
@@ -694,7 +694,7 @@ p.clean {
 }
 
 p.clean2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 0;
     margin-top: 0px;
@@ -702,7 +702,7 @@ p.clean2 {
 }
 
 p.clean3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 11;
     margin-bottom: 5px;
     margin-top: 2px;
@@ -711,14 +711,14 @@ p.clean3 {
 
 
 p.console {
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", monospace;
     font-size: 12;
     color: white;
     margin-top: 0;
 }
 
 p.consoleOld {
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", monospace;
     font-size: 12;
     color: grey;
     margin-bottom: 0;
@@ -726,7 +726,7 @@ p.consoleOld {
 
 p.hypnoDrone {
     
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
     font-size: 150;
     color: white;
     line-height: 115px;
@@ -807,7 +807,7 @@ p.hypnoDrone {
    text-shadow: #cccccc 0 1px 0;
    color: #000000;
    font-size: 16px;
-   font-family: helvetica, serif;
+   font-family: helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", serif;
    text-decoration: none;
    vertical-align: middle;
    outline: none;
@@ -867,7 +867,7 @@ p.hypnoDrone {
    text-shadow: #cccccc 0 1px 0;
    color: #000000;
    font-size: 11px;
-   font-family: helvetica, serif;
+   font-family: helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", serif;
    text-decoration: none;
    vertical-align: middle;
    outline: none;
@@ -908,3 +908,10 @@ p.hypnoDrone {
    border: 1px solid #ffffff;
 }
 
+
+
+/* 中文汉化：CJK 字体的默认行高比 Helvetica 高，会把绝对定位的战斗信息层
+   向下撑开、压住下方的“荣誉”。这里把行高固定为接近原版的数值。 */
+#battleInterfaceDiv {
+    line-height: 1.15;
+}

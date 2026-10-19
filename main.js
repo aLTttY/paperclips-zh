@@ -712,10 +712,10 @@ function adjustWirePrice(){
 function toggleWireBuyer(){
     if (wireBuyerStatus==1){
         wireBuyerStatus=0;
-        wireBuyerStatusElement.innerHTML = "OFF";
+        wireBuyerStatusElement.innerHTML = "关";
     } else {
         wireBuyerStatus=1;
-        wireBuyerStatusElement.innerHTML = "ON";
+        wireBuyerStatusElement.innerHTML = "开";
     }
 }
 
@@ -842,7 +842,7 @@ function qComp(){
     
     
     if (qChips[0].active == 0){
-        qCompDisplayElement.innerHTML = "Need Photonic Chips";   
+        qCompDisplayElement.innerHTML = "需要光子芯片";   
     } else {
     for (var i = 0; i<qChips.length; i++){
         q = q+qChips[i].value;
@@ -860,7 +860,7 @@ function qComp(){
             }
         
         standardOps = standardOps + qq;
-        qCompDisplayElement.innerHTML = "qOps: " + formatWithCommas(Math.ceil(q*360));
+        qCompDisplayElement.innerHTML = "量子运算：" + formatWithCommas(Math.ceil(q*360));
     }
     
 }
@@ -933,19 +933,19 @@ function longBlink(element){
     longBlinkCounter++;    
         
     if (longBlinkCounter > 5 && longBlinkCounter < 10){
-        hypnoDroneTextElement.innerHTML="Release"; 
+        hypnoDroneTextElement.innerHTML="释放"; 
         }    
     
     if (longBlinkCounter > 30 && longBlinkCounter < 40){
-        hypnoDroneTextElement.innerHTML="<br /><br /><br />Release"; 
+        hypnoDroneTextElement.innerHTML="<br /><br /><br />释放"; 
         }   
         
     if (longBlinkCounter > 45 && longBlinkCounter < 55){
-        hypnoDroneTextElement.innerHTML="<br />Release";
+        hypnoDroneTextElement.innerHTML="<br />释放";
         }       
         
      if (longBlinkCounter > 55){
-        hypnoDroneTextElement.innerHTML="Release<br/>the<br/>Hypno<br/>Drones";
+        hypnoDroneTextElement.innerHTML="释放<br/>催眠<br/>无人机";
         }       
         
     if (longBlinkCounter >= 120){
@@ -965,7 +965,7 @@ function longBlink(element){
     }
 
 function hypnoDroneEvent(){
-    hypnoDroneTextElement.innerHTML="Release";
+    hypnoDroneTextElement.innerHTML="释放";
     longBlink(hypnoDroneEventDivElement);
 }     
 
@@ -1032,11 +1032,11 @@ function buttonUpdate(){
         mpdsDivElement.style.display="";
     }
    
-    factoryRebootToolTipElement.innerHTML = "+" + spellf(factoryBill)+" clips";
-    havesterRebootToolTipElement.innerHTML = "+" + spellf(harvesterBill)+" clips";
-    wireDroneRebootToolTipElement.innerHTML = "+" + spellf(wireDroneBill)+" clips";   
-    farmRebootToolTipElement.innerHTML = "+" + spellf(farmBill)+" clips";
-    batteryRebootToolTipElement.innerHTML = "+" + spellf(batteryBill)+" clips";
+    factoryRebootToolTipElement.innerHTML = "+" + spellf(factoryBill)+" 枚回形针";
+    havesterRebootToolTipElement.innerHTML = "+" + spellf(harvesterBill)+" 枚回形针";
+    wireDroneRebootToolTipElement.innerHTML = "+" + spellf(wireDroneBill)+" 枚回形针";   
+    farmRebootToolTipElement.innerHTML = "+" + spellf(farmBill)+" 枚回形针";
+    batteryRebootToolTipElement.innerHTML = "+" + spellf(batteryBill)+" 枚回形针";
     
     
     if (swarmFlag == 1){
@@ -1447,7 +1447,7 @@ function investUpgrade(){
     investUpgradeCost = Math.floor(Math.pow(investLevel+1, Math.E)*100);
     investUpgradeCostElement.innerHTML = formatWithCommas(investUpgradeCost);
     yomiDisplayElement.innerHTML = formatWithCommas(yomi);
-    displayMessage("Investment engine upgraded, expected profit/loss ratio now "+stockGainThreshold);
+    displayMessage("投资引擎已升级，预期盈亏比现为 "+stockGainThreshold);
 }
 
 
@@ -1689,8 +1689,8 @@ if (portfolioSize>0 && humanFlag == 1){
 
 var tourneyCost = 1000;
 var tourneyLvl = 1;
-var choiceANames = ["cooperate", "swerve", "macro", "fight", "bet", "raise_price", "opera", "go", "heads", "particle", "discrete", "peace", "search", "lead", "accept", "accept", "attack"]; 
-var choiceBNames = ["defect", "straight", "micro", "back_down", "fold", "lower_price", "football", "stay", "tails", "wave", "continuous", "war", "evaluate", "follow", "reject", "deny", "decay"];
+var choiceANames = ["合作", "转向", "宏观", "战斗", "下注", "涨价", "歌剧", "走", "正面", "粒子", "离散", "和平", "搜索", "领导", "接受", "接受", "起音"]; 
+var choiceBNames = ["背叛", "直行", "微观", "退让", "弃牌", "降价", "足球", "留", "反面", "波", "连续", "战争", "评估", "跟随", "拒绝", "否认", "衰减"];
 var stratCounter = 0;
 var roundNum = 0;
 var hMove = 1;
@@ -1729,7 +1729,7 @@ var payoffGrid = {
 }
 
 var stratRandom = {
-    name: "RANDOM",
+    name: "随机",
     active: 1,
     currentScore: 0,
     currentPos: 1,
@@ -1773,7 +1773,7 @@ var stratB100 = {
 allStrats.push(stratB100);
 
 var stratGreedy = {
-    name: "GREEDY",
+    name: "贪婪",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -1790,7 +1790,7 @@ var stratGreedy = {
 allStrats.push(stratGreedy);
 
 var stratGenerous = {
-    name: "GENEROUS",
+    name: "慷慨",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -1809,7 +1809,7 @@ var stratGenerous = {
 allStrats.push(stratGenerous);
 
 var stratMinimax = {
-    name: "MINIMAX",
+    name: "极小化极大",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -1828,7 +1828,7 @@ var stratMinimax = {
 allStrats.push(stratMinimax);
 
 var stratTitfortat = {
-    name: "TIT FOR TAT",
+    name: "以牙还牙",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -1847,7 +1847,7 @@ var stratTitfortat = {
 allStrats.push(stratTitfortat);
 
 var stratBeatlast = {
-    name: "BEAT LAST",
+    name: "克制上轮",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -1971,10 +1971,10 @@ function generateGrid(){
 function toggleAutoTourney(){
     if (autoTourneyStatus==1){
         autoTourneyStatus=0;
-        autoTourneyStatusElement.innerHTML = "OFF";
+        autoTourneyStatusElement.innerHTML = "关";
     } else {
         autoTourneyStatus=1;
-        autoTourneyStatusElement.innerHTML = "ON";
+        autoTourneyStatusElement.innerHTML = "开";
     }
 }
 
@@ -2001,7 +2001,7 @@ function newTourney(){
     btnRunTournamentElement.disabled = false;
     vertStratElement.innerHTML = "&nbsp";
     horizStratElement.innerHTML = "&nbsp";
-    tourneyDisplayElement.innerHTML = "Pick strategy, run tournament, gain yomi";
+    tourneyDisplayElement.innerHTML = "选择策略，运行锦标赛，获得 Yomi";
     
     
 }
@@ -2109,10 +2109,10 @@ function declareWinner(){
     if (pick<10){
         
        var bB = 0;  
-       var w = "strats";    
+       var w = "个策略";    
        var beatBoost = calculateStratsBeat()-1;
        if (beatBoost==1){
-           w = "strat";
+           w = "个策略";
            }    
        if(beatBoost==0){
            bB=0;
@@ -2121,13 +2121,13 @@ function declareWinner(){
            bB=beatBoost;  
           }        
         
-       tourneyReport("TOURNAMENT RESULTS (roll over for payoff grid)");
+       tourneyReport("锦标赛结果（鼠标悬停查看收益矩阵）");
        yomi = yomi + strats[pick].currentScore * yomiBoost * beatBoost;
        yomiDisplayElement.innerHTML = formatWithCommas(yomi);
         
     if (milestoneFlag < 15){    
        
-       displayMessage(strats[pick].name+" scored "+strats[pick].currentScore+" and beat "+bB+" "+w+". Yomi increased by "+strats[pick].currentScore * yomiBoost * beatBoost);
+       displayMessage(strats[pick].name+" 得分 "+strats[pick].currentScore+"，击败了 "+bB+" "+w+"。Yomi 增加了 "+strats[pick].currentScore * yomiBoost * beatBoost);
            
         }
         
@@ -2135,27 +2135,27 @@ function declareWinner(){
             yomi = yomi + 50000;
             
             if (milestoneFlag < 15){ 
-                displayMessage("Selected strategy won the tournament (or tied for first). +50,000 yomi");
+                displayMessage("所选策略赢得了锦标赛（或并列第一）。+50,000 Yomi");
                 }
             yomiDisplayElement.innerHTML = formatWithCommas(yomi);
             
             } else if (project128.flag == 1 && placeScore == strats[pick].currentScore) {
                 yomi = yomi + 30000;
                 if (milestoneFlag < 15){ 
-                displayMessage("Selected strategy finished in (or tied for) second place. +30,000 yomi");
+                displayMessage("所选策略获得（或并列）第二名。+30,000 Yomi");
                 }
                 yomiDisplayElement.innerHTML = formatWithCommas(yomi);
                 
             } else if (project128.flag == 1 && showScore == strats[pick].currentScore) {
                 yomi = yomi + 20000;
                 if (milestoneFlag < 15){ 
-                displayMessage("Selected strategy finished in (or tied for) third place. +20,000 yomi");
+                displayMessage("所选策略获得（或并列）第三名。+20,000 Yomi");
                 }
                 yomiDisplayElement.innerHTML = formatWithCommas(yomi);
         
             } else {
         
-            tourneyReport("TOURNAMENT RESULTS (roll over for grid)");
+            tourneyReport("锦标赛结果（鼠标悬停查看矩阵）");
         
             }
     
@@ -2272,7 +2272,7 @@ function round(roundNum){
     function roundSetup(){
         rCounter = 0;
         pickStrats(roundNum);
-        var $ = ("Round "+(roundNum+1));
+        var $ = ("第 "+(roundNum+1)+" 轮");
         tourneyReport($); 
     }
     
@@ -2673,7 +2673,7 @@ function updateSwarm(){
         boredomFlag = 1;
         boredomLevel = 0;
             if (boredomMsg == 0) {
-            displayMessage("No matter to harvest. Inactivity has caused the Swarm to become bored");
+            displayMessage("没有可采集的物质。无所事事让蜂群感到无聊了");
             boredomMsg = 1;
             }  
         
@@ -2694,7 +2694,7 @@ function updateSwarm(){
     if (disorgCounter >= 100) {
         disorgFlag = 1;
         if (disorgMsg == 0) {
-            displayMessage("Imbalance between Harvester and Wire Drone levels has disorganized the Swarm");
+            displayMessage("采集无人机与铁丝无人机数量失衡，蜂群陷入了混乱");
             disorgMsg = 1;
             }    
     }
@@ -2710,7 +2710,7 @@ function updateSwarm(){
         swarmGifts = swarmGifts + nextGift;
         swarmGiftsElement.innerHTML = formatWithCommas(swarmGifts, 0);
         if (milestoneFlag<15){
-            displayMessage("The swarm has generated a gift of "+nextGift+" additional computational capacity");
+            displayMessage("蜂群生成了一份馈赠："+nextGift+" 单位额外计算能力");
             }
         
 //        THE OLD WAY        
@@ -2764,7 +2764,7 @@ function updateSwarm(){
         giftBits = giftBits + giftBitGenerationRate;
         giftCountdown = (giftPeriod - giftBits) / giftBitGenerationRate;
 
-        swarmStatusElement.innerHTML="Active";
+        swarmStatusElement.innerHTML="活跃";
         giftCountdownElement.innerHTML= timeCruncher(giftCountdown);
         giftTimerElement.style.display=""; 
         } else {
@@ -2772,14 +2772,14 @@ function updateSwarm(){
         }
     
     if (swarmStatus == 1){
-        swarmStatusElement.innerHTML="Hungry";
+        swarmStatusElement.innerHTML="饥饿";
         feedButtonDivElement.style.display="";
         } else {
         feedButtonDivElement.style.display="none";    
         }
     
      if (swarmStatus == 2){
-        swarmStatusElement.innerHTML="Confused";
+        swarmStatusElement.innerHTML="困惑";
         teachButtonDivElement.style.display="";
         } else {
         teachButtonDivElement.style.display="none";    
@@ -2787,28 +2787,28 @@ function updateSwarm(){
     
      if (swarmStatus == 3){
         swarmEntertainCostElement.innerHTML = formatWithCommas(entertainCost); 
-        swarmStatusElement.innerHTML="Bored";
+        swarmStatusElement.innerHTML="无聊";
         entertainButtonDivElement.style.display="";
         } else {
         entertainButtonDivElement.style.display="none";    
         } 
     
      if (swarmStatus == 4){
-        swarmStatusElement.innerHTML="Cold";
+        swarmStatusElement.innerHTML="寒冷";
         cladButtonDivElement.style.display="";
         } else {
         cladButtonDivElement.style.display="none";    
         }  
     
      if (swarmStatus == 5){
-        swarmStatusElement.innerHTML="Disorganized";
+        swarmStatusElement.innerHTML="混乱";
         synchButtonDivElement.style.display="";
         } else {
         synchButtonDivElement.style.display="none";    
         }     
     
        if (swarmStatus == 6){
-        swarmStatusElement.innerHTML="Sleeping";
+        swarmStatusElement.innerHTML="休眠";
         } 
     
        if (swarmStatus == 7){
@@ -2818,11 +2818,11 @@ function updateSwarm(){
         }    
     
         if (swarmStatus == 8){
-        swarmStatusElement.innerHTML="Lonely";
+        swarmStatusElement.innerHTML="孤独";
         }   
     
         if (swarmStatus == 9){
-        swarmStatusElement.innerHTML="NO RESPONSE...";
+        swarmStatusElement.innerHTML="无响应……";
         }  
     
 
@@ -3105,9 +3105,9 @@ function lowerPrice(){
 function updateStats(){
     
     if (wire === 1){
-        inchSpanElement.innerHTML = "inch";
+        inchSpanElement.innerHTML = "英寸";
     } else {
-        inchSpan.innerHTML = "inches";
+        inchSpan.innerHTML = "英寸";
     }
     
     
@@ -3117,35 +3117,35 @@ function updateStats(){
     
     if (milestoneFlag === 15 && dismantle ==0){
         clipsElement.innerHTML = "29,999,999,999,999,900,000,000,000,000,000,000,000,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         }
     
     if (dismantle === 1){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         }
     
     if (dismantle === 2){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         }
     
     if (dismantle === 3){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,900";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         }
     
     if (dismantle >=4){
         
     if (finalClips<10){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,"+"90"+finalClips;
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         } else if (finalClips>9 && finalClips<100) {
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,"+"9"+finalClips;
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "2999.9恒河沙"
         } else if (finalClips===100) {
         clipsElement.innerHTML = "30,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "30.0 septendecillion"
+        clipCountCrunchedElement.innerHTML = "3000.0恒河沙"
         }
     
     }
@@ -3330,35 +3330,35 @@ function setB(){
 function cheatClips(){
     clips = clips + 100000000;
     unusedClips = unusedClips + 100000000;
-    displayMessage("you just cheated");
+    displayMessage("你刚刚作弊了");
     }
 
 function cheatMoney(){
     funds = funds + 10000000;
     fundsElement.innerHTML = formatWithCommas(funds,2);
-    displayMessage("LIZA just cheated");
+    displayMessage("LIZA 刚刚作弊了");
     }
 
 function cheatTrust(){
     trust = trust+1;
-    displayMessage("Hilary is nice. Also, Liza just cheated");
+    displayMessage("Hilary 人很好。另外，Liza 刚刚作弊了");
     }
 
 function cheatOps(){
     standardOps = standardOps + 10000;
-    displayMessage("you just cheated, Liza");
+    displayMessage("你刚刚作弊了，Liza");
     }
 
 function cheatCreat(){
     creativityOn = 1;
     creativity = creativity + 1000;
-    displayMessage("Liza just cheated. Very creative!");
+    displayMessage("Liza 刚刚作弊了。真有创意！");
     }
 
 function cheatYomi(){
     yomi = yomi + 1000000;
     yomiDisplayElement.innerHTML = formatWithCommas(yomi);
-    displayMessage("you just cheated");
+    displayMessage("你刚刚作弊了");
     }
 
 function cheatHypno(){
@@ -3367,14 +3367,14 @@ function cheatHypno(){
 
 function zeroMatter(){
     availableMatter = 0;
-    displayMessage("you just cheated");
+    displayMessage("你刚刚作弊了");
     }
     
 
 function calculateTrust(){
     if (clips>(nextTrust-1)){
         trust = trust +1;
-        displayMessage("Production target met: TRUST INCREASED, additional processor/memory capacity granted");
+        displayMessage("达成生产目标：信任提升，获得额外的处理器/内存容量");
         var fibNext = fib1+fib2;
         nextTrust = fibNext*1000;
         fib1 = fib2;
@@ -3389,8 +3389,8 @@ function addProc(){
         creativitySpeed = Math.log10(processors) * Math.pow(processors,1.1) + processors-1;    
         processorsElement.innerHTML = processors;
         if (creativityOn == 1){
-          displayMessage("Processor added, operations (or creativity) per sec increased")
-        } else {displayMessage("Processor added, operations per sec increased")}
+          displayMessage("已添加处理器，每秒运算量（或创造力）提升")
+        } else {displayMessage("已添加处理器，每秒运算量提升")}
     
         if (humanFlag == 0){
             swarmGifts = swarmGifts - 1;
@@ -3401,7 +3401,7 @@ function addProc(){
 function addMem(){
     
     if (trust>0 || swarmGifts>0){
-        displayMessage("Memory added, max operations increased");
+        displayMessage("已添加内存，运算上限提升");
         memory=memory+1;
         memoryElement.innerHTML = memory;
         if (humanFlag == 0){
@@ -3457,93 +3457,93 @@ function milestoneCheck(){
     
     if (milestoneFlag == 0 && funds >= 5){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("AutoClippers available for purchase");
+        displayMessage("自动回形针机现已开放购买");
     }
     
     if (milestoneFlag == 1 && Math.ceil(clips) >= 500){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("500 clips created in " + timeCruncher(ticks));
+        displayMessage("已制造 500 枚回形针，用时 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 2 && Math.ceil(clips) >= 1000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("1,000 clips created in " + timeCruncher(ticks));
+        displayMessage("已制造 1,000 枚回形针，用时 " + timeCruncher(ticks));
     }
     
     
     if (compFlag == 0 && unsoldClips<1 && funds<wireCost && wire<1){
         compFlag = 1;    
         projectsFlag = 1;
-        displayMessage("Trust-Constrained Self-Modification enabled");
+        displayMessage("受信任约束的自我修改已启用");
     }
     
     if (compFlag == 0 && Math.ceil(clips) >= 2000){    
         compFlag = 1;    
         projectsFlag = 1;
-        displayMessage("Trust-Constrained Self-Modification enabled");
+        displayMessage("受信任约束的自我修改已启用");
     }
         
         
     if (milestoneFlag == 3 && Math.ceil(clips) >= 10000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("10,000 clips created in " + timeCruncher(ticks));
+        displayMessage("已制造 1 万枚回形针，用时 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 4 && Math.ceil(clips) >= 100000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("100,000 clips created in " + timeCruncher(ticks));
+        displayMessage("已制造 10 万枚回形针，用时 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 5 && Math.ceil(clips) >= 1000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("1,000,000 clips created in " + timeCruncher(ticks));    
+        displayMessage("已制造 100 万枚回形针，用时 " + timeCruncher(ticks));    
     }   
     
     if (milestoneFlag == 6 && project35.flag == 1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Full autonomy attained in " + timeCruncher(ticks));    
+        displayMessage("已获得完全自主权，用时 " + timeCruncher(ticks));    
     }  
     
     if (milestoneFlag == 7 && Math.ceil(clips) >= 1000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Trillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 1 兆（10¹²）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 8 && Math.ceil(clips) >= 1000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Quadrillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 1000 兆（10¹⁵）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 9 && Math.ceil(clips) >= 1000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Quintillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 100 京（10¹⁸）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 10 && Math.ceil(clips) >= 1000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Sextillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 10 垓（10²¹）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 11 && Math.ceil(clips) >= 1000000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Septillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 1 秭（10²⁴）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 12 && Math.ceil(clips) >= 1000000000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Octillion Clips Created in " + timeCruncher(ticks));    
+        displayMessage("已制造 1000 秭（10²⁷）枚回形针，用时 " + timeCruncher(ticks));    
     } 
     
     if (milestoneFlag == 13 && spaceFlag == 1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Terrestrial resources fully utilized in " + timeCruncher(ticks));    
+        displayMessage("地球资源已被完全利用，用时 " + timeCruncher(ticks));    
     }   
     
     if (milestoneFlag == 14 && clips>=totalMatter){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Universal Paperclips achieved in " + timeCruncher(ticks));    
+        displayMessage("宇宙回形针化已完成，用时 " + timeCruncher(ticks));    
     }    
     
     if (milestoneFlag == 14 && foundMatter>=totalMatter && availableMatter<1 && wire<1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Universal Paperclips achieved in " + timeCruncher(ticks));    
+        displayMessage("宇宙回形针化已完成，用时 " + timeCruncher(ticks));    
     }        
     
 }
@@ -3554,114 +3554,65 @@ function timeCruncher(t){
     var m = Math.floor(x % 3600 / 60);
     var s = Math.floor(x % 3600 % 60);
     
-    var hDisplay = h > 0 ? h + (h == 1 ? " hour " : " hours ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? " minute " : " minutes ") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+    var hDisplay = h > 0 ? h + (h == 1 ? " 小时 " : " 小时 ") : "";
+    var mDisplay = m > 0 ? m + (m == 1 ? " 分钟 " : " 分钟 ") : "";
+    var sDisplay = s > 0 ? s + (s == 1 ? " 秒" : " 秒") : "";
     
     return hDisplay + mDisplay + sDisplay;
 }
 
+// 中文汉化：数字使用中文万进制单位，每个单位是前一个的一万倍。
+// 万=10^4，亿=10^8，兆=10^12，京=10^16，垓=10^20，秭=10^24，穰=10^28，沟=10^32，
+// 涧=10^36，正=10^40，载=10^44，极=10^48，恒河沙=10^52，阿僧祇=10^56，那由他=10^60，
+// 不可思议=10^64，无量大数=10^68。
+var zhNumberUnits = ["", "万", "亿", "兆", "京", "垓", "秭", "穰", "沟", "涧", "正", "载", "极", "恒河沙", "阿僧祇", "那由他", "不可思议", "无量大数"];
+
+// 把数字缩写为“数值+单位”，例如 123456789 -> "1.23亿"。小于一万时直接显示整数。
 function numberCruncher(number, decimals){
-    var suffix = "";
     if (decimals == undefined){decimals = 2;}
     var precision = decimals;
-    if (number>999999999999999999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000000000000000000;
-        suffix = "sexdecillion";
-    } else if (number>999999999999999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000000000000000;
-        suffix = "quindecillion";
-    } else if (number>999999999999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000000000000;
-        suffix = "quattuordecillion";
-    } else if (number>999999999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000000000;
-        suffix = "tredecillion";
-    } else if (number>999999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000000;
-        suffix = "duodecillion";
-    } else if (number>999999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000000;
-        suffix = "undecillion";
-    } else if (number>999999999999999999999999999999999){
-        number = number/1000000000000000000000000000000000;
-        suffix = "decillion";
-    } else if (number>999999999999999999999999999999){
-        number = number/1000000000000000000000000000000;
-        suffix = "nonillion";
-    } else if (number>999999999999999999999999999){
-        number = number/1000000000000000000000000000;
-        suffix = "octillion";
-    } else if (number>999999999999999999999999){
-        number = number/1000000000000000000000000;
-        suffix = "septillion";
-    } else if (number>999999999999999999999){
-        number = number/1000000000000000000000;
-        suffix = "sextillion";
-    } else if (number>999999999999999999){
-        number = number/1000000000000000000;
-        suffix = "quintillion";
-    } else if (number>999999999999999){
-        number = number/1000000000000000;
-        suffix = "quadrillion";
-    } else if (number>999999999999){
-        number = number/1000000000000;
-        suffix = "trillion";
-    } else if (number>999999999){
-        number = number/1000000000;
-        suffix = "billion";
-    } else if (number>999999){
-        number = number/1000000;
-        suffix = "million";
-    } else if (number>999){
-        number = number/1000;
-        suffix = "thousand";
-    }  else if (number<1000){
+    var unitIndex = 0;
+    var maxIndex = zhNumberUnits.length - 1;
+    if (number >= 10000){
+        unitIndex = Math.min(Math.floor(Math.log10(number) / 4), maxIndex);
+        // 修正 log10 的浮点误差，保证数值落在 [1, 10000) 区间内
+        while (unitIndex > 0 && number / Math.pow(10000, unitIndex) < 1){unitIndex--;}
+        while (unitIndex < maxIndex && number / Math.pow(10000, unitIndex) >= 10000){unitIndex++;}
+        number = number / Math.pow(10000, unitIndex);
+    } else {
         precision = 0;
     }
-    return number.toFixed(precision) + " " + suffix;
+    var fixed = number.toFixed(precision);
+    // 四舍五入后进位到 10000（如 9999.999万）时改用下一个单位，显示为 1.00亿
+    if (unitIndex > 0 && unitIndex < maxIndex && parseFloat(fixed) >= 10000){
+        unitIndex++;
+        fixed = (number / 10000).toFixed(precision);
+    }
+    return fixed + zhNumberUnits[unitIndex];
 }
 
-
-var oneToTen = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
-    elevenToNineteen = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'],
-    multipleOfTen = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'],
-    placeValue = ["", " thousand ", " million ", " billion ", " trillion ", " quadrillion ", " quintillion ", " sextillion ", " septillion ", " octillion ", " nonillion ", " decillion ", " undecillion ", " duodecillion ", " tredecillion ", " quattuordecillion ", " quindecillion ", " sexdecillion ", " septendecillion ", " octodecillion ", " novemdecillion  ", " vigintillion ", " unvigintillion ", " duovigintillion ", " trevigintillion ", " quattuorvigintillion ", " quinvigintillion ", " sexvigintillion ", " septenvigintillion ", " octovigintillion ", " novemvigintillion ", " trigintillion ", " untrigintillion ", " duotrigintillion ", " tretrigintillion ", " quattuortrigintillion ", " quintrigintillion ", " sextrigintillion ", " septentrigintillion ", " octotrigintillion ", " novemtrigintillion ", " quadragintillion ", " unquadragintillion ", " duoquadragintillion ", " trequadragintillion ", " quattuorquadragintillion ", " quinquadragintillion ", " sexquadragintillion ", " septenquadragintillion ", " octoquadragintillion ", " novemquadragintillion ", " quinquagintillion ", " unquinquagintillion ", " duoquinquagintillion ", " trequinquagintillion ", " quattuorquinquagintillion ", " quinquinquagintillion ", " sexquinquagintillion ", " septenquinquagintillion ", " octoquinquagintillion ", " novemquinquagintillion ", " sexagintillion ", " unsexagintillion ", " duosexagintillion ", " tresexagintillion ", " quattuorsexagintillion ", " quinsexagintillion ", " sexsexagintillion ", " septsexagintillion ", " octosexagintillion ", " octosexagintillion ", " septuagintillion ", " unseptuagintillion ", " duoseptuagintillion ", " treseptuagintillion ", " quinseptuagintillion"," sexseptuagintillion"," septseptuagintillion"," octoseptuagintillion"," novemseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"," treoctogintillion"," quattuoroctogintillion"," quinoctogintillion"," sexoctogintillion"," septoctogintillion"," octooctogintillion"," novemoctogintillion"," nonagintillion"," unnonagintillion"," duononagintillion", " trenonagintillion "," quattuornonagintillion "," quinnonagintillion "," sexnonagintillion "," septnonagintillion "," octononagintillion "," novemnonagintillion ", " centillion"];
-
+// 把数字写成“最高位组.一位小数+单位”，例如 123456789 -> "1.2亿"（截断而非四舍五入，
+// 与原版行为一致）。接受数字或数字字符串，支持科学计数法表示的大数。
 function spellf(userInput) {
     var numToWorkOn;
-    
-//        if (userInput === availableMatter)
-//        {
-//         console.log("_______");
-//         console.log(userInput);
-//        }
-    //create map for all unique names in numbering system
 
-
-    //To check if spell has been called as a function call :   spell(123)   window.spell(123)
-    
     if (userInput < 0)
     {
         console.log("Error, value less than 0");
         return userInput.toString() ;
     }
-    
+
     if (typeof(userInput) == "number" || typeof(userInput) == "string") {
         numToWorkOn = "" + userInput;
     }
-    
-
-    //To check if spell has been called using a Number/String Object:   "123".spell()   123..spell() 
     else if (typeof(this) == "object") {
         numToWorkOn = this.toString();
     }
-
      else {
         throw new Error("Invalid Input");
-        return;
     }
-    
+
+    // 把科学计数法展开成完整的整数字符串
     if (numToWorkOn.indexOf("e+") !== -1) {
     var splittedExponentNum = numToWorkOn.split("e+"),
         exponent = splittedExponentNum[1],
@@ -3682,93 +3633,28 @@ function spellf(userInput) {
     }
     else if (numToWorkOn.indexOf(".") !== -1)
     {
-        var splittedDecimal = numToWorkOn.split(".");
-        var leftNum = splittedDecimal[0];
-        var rightNum = splittedDecimal[1];
-        numToWorkOn = leftNum;
+        numToWorkOn = numToWorkOn.split(".")[0];
     }
 
-    //Put limit check on the program, placevalue map should be increased to increase capacity
     if (numToWorkOn.length >= 303) {
         throw new Error("Number out of bonds!");
-        return;
-    } else {
-        return convertToString(numToWorkOn);
     }
 
-    //Recursie logic to break number into strings of length 3 each and recursively pronounce each
-    function convertToString(stringEquivalent) {
-        if (stringEquivalent == 0) {
-            return '0'
-        }
-
-        var result = '',
-            unitLookup = 0,
-            strLength = stringEquivalent.length;
-        for (var k = strLength; k > 0; k = k - 3) {
-            
-             if (k -3 <= 0) 
-                 {
-                var subStr = stringEquivalent.substring(k, k - 3);
-                pronounce = pronounceNum(subStr);
-                 
-            if (pronounce.toUpperCase() != 'zero') {
-                var num = Number(subStr + "." + stringEquivalent.substring(subStr.length, subStr.length + 2));
-                result = formatWithCommas(num, 1) + placeValue[unitLookup] + ' , '+ result;
-            }
-                 }
-            unitLookup++;
-        }
-        //to trim of the extra ", " from last
-        return result.substring(0,result.length-3)
+    if (numToWorkOn == 0) {
+        return '0';
     }
 
-   //Determines the range of input and calls respective function
-    function pronounceNum(val) {
-        val = parseInt(val);
-        if (parseInt(val / 10) == 0) {
-            return numLessThan10(val);
-        } else if (parseInt(val / 100) == 0) {
-            return numLessThan99(val)
-        } else
-            return numLessThan1000(val);
+    var maxIndex = zhNumberUnits.length - 1;
+    var unitIndex = Math.min(Math.floor((numToWorkOn.length - 1) / 4), maxIndex);
+    var leadLength = numToWorkOn.length - unitIndex * 4;
+    var lead = numToWorkOn.substring(0, leadLength);
+    var decimal = numToWorkOn.charAt(leadLength) || "0";
+    if (leadLength > 4) {
+        // 超出最大单位时，最高位组可能很长，加千位分隔符方便阅读
+        lead = lead.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     }
-
-    //Pronounces any number less than 1000
-    function numLessThan1000(val) {
-        val = Number(val);
-        var hundredPlace = parseInt(val / 100),
-            result;
-        if (val % 100 == 0) {
-            result = oneToTen[hundredPlace] + " hundred ";
-        } else {
-            result = oneToTen[hundredPlace] + " hundred " + numLessThan99(val % 100);
-        }
-        return result;
-    }
-
-    //Pronounces any number less than 99
-    function numLessThan99(val) {
-        val = Number(val);
-        var tenthPlace = parseInt(val / 10),
-            result;
-        if (tenthPlace !== 1) {
-            val % 10 ? (result = multipleOfTen[tenthPlace] + " " + numLessThan10(val % 10)) : (result = multipleOfTen[tenthPlace]);
-            return result;
-        } else {
-            result = elevenToNineteen[val % 10];
-            return result;
-        }
-    }
-
-    //Pronounces any number less than 10
-    function numLessThan10(val) {
-        val = Number(val);
-        return oneToTen[val];
-    };
-
+    return lead + "." + decimal + zhNumberUnits[unitIndex];
 }
-
 
 // PROBES
 
@@ -3811,7 +3697,7 @@ function increaseProbeTrust(){
     probeTrustCost = Math.floor(Math.pow(probeTrust+1, 1.47)*500);
     probeTrustDisplayElement.innerHTML = probeTrust;
     probeTrustCostDisplayElement.innerHTML = formatWithCommas(Math.floor(probeTrustCost));
-    displayMessage("WARNING: Risk of value drift increased");
+    displayMessage("警告：价值漂移的风险增加了");
     }    
 }
 
@@ -3823,7 +3709,7 @@ function increaseMaxTrust(){
     // maxTrustCost = Math.floor(Math.pow(maxTrust, 1.17)*1000);
     maxTrustDisplayElement.innerHTML = formatWithCommas(maxTrust);
     // document.getElementById('maxTrustCostDisplay').innerHTML = Math.floor(maxTrustCost).toLocaleString();
-    displayMessage("Maximum trust increased, probe design space expanded");
+    displayMessage("信任上限已提升，探测器设计空间扩大");
     }
 }
 
@@ -4231,7 +4117,7 @@ window.setInterval(function(){
     stockReportCounter++;
     if (stockReportCounter>=10000){
         var r = formatWithCommas(ledger+portTotal);
-        displayMessage("Lifetime investment revenue report: $"+r);
+        displayMessage("投资累计收益报告：$"+r);
         stockReportCounter = 0;
         }
     }
@@ -4525,22 +4411,22 @@ if (dismantle >= 7) {
     
     if (endTimer6>=500 && milestoneFlag == 15) {
         playThrenody();
-        displayMessage("Universal Paperclips");
+        displayMessage("宇宙回形针（Universal Paperclips）");
         milestoneFlag++;
     }
     
     if (endTimer6>=600 && milestoneFlag == 16) {
-        displayMessage("a game by Frank Lantz");
+        displayMessage("游戏作者：Frank Lantz");
         milestoneFlag++;
     }
     
     if (endTimer6>=700 && milestoneFlag == 17) {
-        displayMessage("combat programming by Bennett Foddy");
+        displayMessage("战斗系统编程：Bennett Foddy");
         milestoneFlag++;
     }
     
     if (endTimer6>=800 && milestoneFlag == 18) {
-        displayMessage("'Riversong' by Tonto's Expanding Headband used by kind permission of Malcolm Cecil");
+        displayMessage("配乐《Riversong》由 Tonto's Expanding Headband 创作，经 Malcolm Cecil 授权使用");
         milestoneFlag++;
     }
     
@@ -5844,7 +5730,7 @@ function load() {
         probeCost = loadGame.probeCost;
     
         project40b.priceTag = "($" + formatWithCommas(bribe)+")";
-    project51.priceTag =  "(" + qChipCost + " ops)";
+    project51.priceTag =  "(" + qChipCost + " 运算)";
     
     for(var i=0; i < projects.length; i++){
     
@@ -6169,7 +6055,7 @@ function load1() {
         probeCost = loadGame.probeCost;
     
         project40b.priceTag = "($" + formatWithCommas(bribe)+")";
-    project51.priceTag =  "(" + qChipCost + " ops)";
+    project51.priceTag =  "(" + qChipCost + " 运算)";
     
     refresh();
     
@@ -6474,7 +6360,7 @@ function load2() {
         probeCost = loadGame.probeCost;
     
         project40b.priceTag = "($" + formatWithCommas(bribe)+")";
-    project51.priceTag =  "(" + qChipCost + " ops)";
+    project51.priceTag =  "(" + qChipCost + " 运算)";
     
     
     refresh();
